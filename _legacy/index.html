@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Jeremy Posada</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="download-button" onclick="exportPDFBackend()">⬇️ Descargar PDF</button>
+    
+    <div class="cv-container">
+        <div class="inner">
+         <div class="header">
+             <div class="thin-line top"></div>
+             <div class="name"><span class="name-initial">J</span><span class="name-rest">EREMY </span><span class="name-initial">P</span><span class="name-rest">OSADA</span></div>
+             <div class="headline">Software Engineer | Java Spring Boot | Angular | Microservices | Architecture</div>
+             <div class="thin-line under-name"></div>
+             <div class="thick-line" style="margin-top: -6mm;"></div>
+             <div class="contact-info">
+                 <span>Barranquilla, Colombia</span>
+                 <span> ♦ </span>
+                <span>(+57) 3043620454</span>
+                 <span> ♦ </span>
+                 <span><a href="mailto:jeremyposada2003@gmail.com">jeremyposada2003@gmail.com</a></span>
+                 <span> ♦ </span>
+                <span><a href="https://www.linkedin.com/in/jeremy-posada-56855820b" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/jeremy-posada-56855820b</a></span>
+             </div>
+         </div>
+
+        <div class="section">
+            <div class="section-title" style="margin-top: -5mm;">Education</div>
+            <div class="education-grid">
+                <div class="education-item" data-start="2021-06" data-end="2026-06">
+                    <div class="degree">Ingeniero de Sistemas</div>
+                    <div class="institution">INSTITUCIÓN UNIVERSITARIA AMERICANA</div>
+                    <div class="edu-duration"></div>
+                </div>
+
+                <div class="education-item" data-start="2025-01" data-end="2025-02">
+                    <div class="degree">Diplomado en C# .NET</div>
+                    <div class="institution">INSTITUCIÓN UNIVERSITARIA AMERICANA</div>
+                    <div class="edu-duration"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="margin-top: -24px;">
+            <div class="section-title">Profile</div>
+            <div class="profile-text">
+                Software Engineer full-stack con foco en backend y arquitectura. Construyo microservicios Java 21 / Spring Boot con arquitectura hexagonal, DDD y CQRS para SaaS multi-tenant en producción. En frontend: Angular, NGRx, Signals y PWA offline-first. Orientado a sistemas escalables, estables y bien estructurados.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">SKILLS</div>
+            <div class="skills-grid">
+                <div class="skills-column">
+                    <ul>
+                        <li>Microservicios Java 21 / Spring Boot, hexagonal, DDD, CQRS</li>
+                        <li>Spring Security: JWT, RBAC granular (AOP) y multitenancy</li>
+                        <li>Event-driven: Kafka, Redis, Resilience4j, WebFlux</li>
+                        <li>PostgreSQL avanzado: multi-schema, RLS, JSONB, Flyway</li>
+                    </ul>
+                </div>
+                <div class="skills-column">
+                    <ul>
+                        <li>Angular, NGRx, Signals, RxJS, PrimeNG</li>
+                        <li>PWA offline-first: Service Worker, IndexedDB, sync atómico</li>
+                        <li>Docker Compose, GitHub Actions CI/CD, APISIX, MinIO</li>
+                        <li>Observabilidad: Prometheus, Grafana, Loki, Jaeger</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Experience</div>
+            
+            <div class="experience-item" data-start="2023-03" data-end="2023-09">
+                <div class="job-title">Junior Full Stack Developer</div>
+                <div class="company">TIC LTDA</div>
+                <div class="duration"></div>
+                <div class="experience-details">
+                    <ul>
+                        <li>Migración de aplicaciones web PHP → Laravel, mejorando escalabilidad y organización del código.</li>
+                        <li>Módulo de generación de códigos de barras y guías de envío para Triple AAA y Efigas, con consumo de APIs externas en tiempo real.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item" data-start="2025-03" data-end="current">
+                <div class="job-title">Full Stack Software Engineer (Java/Spring Boot & Angular)</div>
+                <div class="company">EIDYKOS S.A.S (Remote, Barranquilla, Colombia)</div>
+                <div class="duration"></div>
+                <div class="experience-details">
+                    <ul>
+                        <li>Diseñé y desarrollé microservicios Java 21 / Spring Boot con arquitectura hexagonal, DDD y CQRS, con Mediator propio para Commands/Queries en SaaS multi-tenant en producción.</li>
+                        <li>Implementé Spring Security con JWT, BCrypt y permisos granulares vía AOP (AspectJ), protegiendo APIs REST en entorno multi-tenant con RBAC.</li>
+                        <li>Construí PWA Angular offline-first (Service Worker + IndexedDB v2) con sync atómico al reconectar, refresh de token y reintentos con backoff — cero pérdida de inspecciones, fotos o audio si la red cae mid-sync.</li>
+                        <li>Modelé PostgreSQL avanzado: multi-schema, JSONB, triggers, índices parciales, Row-Level Security y migraciones Flyway; Redis para caché de permisos y sesiones distribuidas.</li>
+                        <li>Arquitectura event-driven entre microservicios con Apache Kafka, Resilience4j (Circuit Breaker, Retry) y WebFlux/WebClient no-bloqueante.</li>
+                        <li>Arquitectura frontend Angular (Standalone, NGRx Store/Effects/Selectors, Signals, RxJS, PrimeNG) con vertical slicing, lazy loading y design system.</li>
+                        <li>Plataforma productiva con Docker Compose (20+ servicios), Apache APISIX (API Gateway), MinIO (S3), GitHub Actions CI/CD y observabilidad full-stack (Prometheus, Grafana, Loki, Jaeger).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Technologies</div>
+            <div class="technologies">
+                <ul class="tech-list">
+                    <li><b>Languages:</b> Java, TypeScript, JavaScript, SQL</li>
+                    <li><b>Backend:</b> Spring Boot, Spring Security, WebFlux, REST APIs</li>
+                    <li><b>Frontend:</b> Angular, NGRx, RxJS, PWA</li>
+                    <li><b>Data:</b> PostgreSQL, Redis, MySQL, Flyway</li>
+                    <li><b>Messaging:</b> Apache Kafka, Resilience4j</li>
+                    <li><b>DevOps:</b> Docker, GitHub Actions, APISIX, MinIO</li>
+                    <li><b>Observability:</b> Prometheus, Grafana, Loki, Jaeger</li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- .inner -->
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

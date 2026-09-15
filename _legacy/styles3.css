@@ -1,0 +1,367 @@
+/* =========================================================
+   Plantilla con foto — CV Karen Zapata (index3.html)
+   Estructura propia: barra lateral + columna principal.
+   No comparte estilos con index.html / index2.html (ATS).
+   ========================================================= */
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ink: #1c2b36;
+    --ink-soft: #4a5c68;
+    --ink-faint: #6f8091;
+    --accent: #16496f;
+    --accent-soft: #2f7ab0;
+    --sidebar-bg: #eef3f7;
+    --rule: #c9d6e0;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10px;
+    line-height: 1.45;
+    color: var(--ink);
+    background: #f0f0f0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.cv-container {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    background: #fff;
+    display: flex;
+    overflow: hidden;
+}
+
+/* ---------------- Barra lateral ---------------- */
+
+.sidebar {
+    width: 68mm;
+    flex: 0 0 68mm;
+    background: var(--sidebar-bg);
+    padding: 0 0 8mm 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-frame {
+    position: relative;
+    width: 68mm;
+    height: 86mm;
+    background: #dde6ee;
+    overflow: hidden;
+}
+
+.photo-frame .photo {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 22%;
+    display: block;
+}
+
+.photo-hint {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #8ea2b3;
+}
+
+.sidebar-body {
+    padding: 7mm 7mm 0 7mm;
+}
+
+.side-block {
+    margin-bottom: 6mm;
+}
+
+.side-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-bottom: 2.5px;
+    border-bottom: 1.5px solid var(--accent-soft);
+    margin-bottom: 3mm;
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    margin-bottom: 2.6mm;
+    font-size: 9.5px;
+    line-height: 1.35;
+    color: var(--ink-soft);
+    display: flex;
+    gap: 5px;
+}
+
+.contact-list .label {
+    flex: 0 0 auto;
+    font-weight: 700;
+    color: var(--ink);
+    text-transform: uppercase;
+    font-size: 8px;
+    letter-spacing: 0.6px;
+    padding-top: 1px;
+    min-width: 14mm;
+}
+
+.contact-list a {
+    color: inherit;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.side-list {
+    list-style: none;
+}
+
+.side-list li {
+    position: relative;
+    padding-left: 8px;
+    margin-bottom: 2.2mm;
+    font-size: 9.5px;
+    line-height: 1.35;
+    color: var(--ink-soft);
+}
+
+.side-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 3px;
+    height: 3px;
+    background: var(--accent-soft);
+}
+
+/* ---------------- Columna principal ---------------- */
+
+.main {
+    flex: 1 1 auto;
+    padding: 14mm 12mm 8mm 11mm;
+    min-width: 0;
+}
+
+.name {
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.name strong {
+    font-weight: 700;
+    display: block;
+}
+
+.headline {
+    margin-top: 3mm;
+    padding-top: 2.5mm;
+    border-top: 1px solid var(--rule);
+    font-size: 9.5px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+}
+
+.section {
+    margin-top: 8.5mm;
+}
+
+.section-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 3mm;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-title::after {
+    content: '';
+    flex: 1 1 auto;
+    height: 1px;
+    background: var(--rule);
+}
+
+.profile-text {
+    text-align: justify;
+    font-size: 10.5px;
+    line-height: 1.62;
+    color: var(--ink-soft);
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5mm;
+}
+
+.degree {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.institution {
+    font-size: 9.5px;
+    color: var(--ink-soft);
+    margin-top: 0.6mm;
+}
+
+.edu-duration,
+.duration {
+    font-size: 8.5px;
+    letter-spacing: 0.8px;
+    color: var(--accent-soft);
+    margin-top: 0.8mm;
+    font-weight: 600;
+}
+
+.experience-item {
+    position: relative;
+    padding-left: 5mm;
+    margin-bottom: 6.5mm;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2.5px;
+    bottom: 1mm;
+    width: 1.5px;
+    background: var(--rule);
+}
+
+.experience-item::after {
+    content: '';
+    position: absolute;
+    left: -1.75px;
+    top: 2.5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+}
+
+.job-title {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.company {
+    font-size: 9.5px;
+    color: var(--ink-soft);
+    margin-top: 0.5mm;
+}
+
+.experience-details ul {
+    list-style: none;
+    margin-top: 1.6mm;
+}
+
+.experience-details li {
+    position: relative;
+    padding-left: 8px;
+    margin-bottom: 1.9mm;
+    font-size: 10px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    text-align: justify;
+}
+
+.experience-details li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 3px;
+    height: 3px;
+    background: var(--rule);
+}
+
+.references-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5mm;
+}
+
+.reference-name {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.reference-details {
+    font-size: 9.5px;
+    color: var(--ink-soft);
+    margin-top: 0.5mm;
+}
+
+/* ---------------- UI ---------------- */
+
+.download-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 14px;
+}
+
+.download-button:hover {
+    background: #218838;
+}
+
+@media print {
+    body {
+        background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .download-button {
+        display: none !important;
+    }
+
+    .cv-container {
+        margin: 0;
+        page-break-inside: avoid;
+    }
+}

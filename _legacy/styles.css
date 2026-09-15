@@ -1,0 +1,347 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    font-size: 11px;
+    line-height: 1.3;
+    color: #333;
+    background: white;
+}
+
+.cv-container {
+    width: 210mm;
+    max-width: 210mm;
+    margin: 0 auto;
+    background: white;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+}
+
+.inner {
+    padding: 15mm;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.header .thin-line {
+    width: 100%;
+    height: 1px;
+    background: #bbb;
+}
+
+.header .thin-line.top {
+    margin-bottom: 6px;
+}
+
+.header .thin-line.under-name {
+    margin-top: 5px;
+    margin-bottom: 7mm;
+}
+
+.header .thick-line {
+    width: 100%;
+    height: 3px;
+    background: #333;
+}
+
+.name {
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-family: inherit;
+    letter-spacing: 0.2px;
+}
+
+.name-initial {
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+.name-rest {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+/* Cabecera con foto (index3.html) */
+.header-main {
+    display: flex;
+    align-items: center;
+    gap: 8mm;
+    margin-bottom: 4px;
+}
+
+.header-text {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.header-main .name {
+    margin-bottom: 6px;
+}
+
+.photo-frame {
+    position: relative;
+    flex: 0 0 auto;
+    width: 26mm;
+    height: 32mm;
+    border: 1px solid #bbb;
+    background: #fafafa;
+    overflow: hidden;
+}
+
+.photo-frame .photo {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-hint {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 0;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+.contact-info {
+    margin: 8px 10px;
+    font-size: 10px;
+    color: #666;
+}
+
+.headline {
+    margin-top: -4px;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #444;
+}
+
+.contact-info a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.section {
+    margin-bottom: 10px;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+.education-item {
+    padding: 5px 0;
+}
+
+.degree {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.institution {
+    font-size: 11px;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.edu-duration {
+    color: #666;
+    font-size: 10px;
+    margin-bottom: 6px;
+}
+
+.job-title {
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: #111;
+}
+
+.section-title {
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 7px 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title::before,
+.section-title::after {
+    content: '';
+    flex: 1 1 0;
+    height: 1px;
+    background: #bbb;
+    margin: 0 12px;
+}
+
+.education-item,
+.experience-item {
+    margin-bottom: 8px;
+}
+
+.company {
+    font-style: italic;
+    margin-bottom: 3px;
+}
+
+.status,
+.duration {
+    color: #666;
+    font-size: 10px;
+    margin-bottom: 6px;
+}
+
+.profile-text {
+    text-align: justify;
+    line-height: 1.55;
+    margin-bottom: 6px;
+    font-size: 11.5px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.skills-column ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.skills-column li {
+    margin-bottom: 3px;
+    font-size: 11px;
+}
+
+.experience-details ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+.experience-details li {
+    margin-bottom: 3px;
+    font-size: 11px;
+    text-align: justify;
+}
+
+.references {
+    margin-top: 15px;
+}
+
+.reference-item {
+    margin-bottom: 10px;
+}
+
+.reference-name {
+    font-weight: bold;
+}
+
+.reference-details {
+    font-size: 11px;
+    color: #666;
+}
+
+.technologies {
+    margin-top: 8px;
+}
+
+.tech-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    columns: 2;
+    column-gap: 20px;
+}
+
+.tech-list li {
+    margin-bottom: 3px;
+    font-size: 11px;
+    break-inside: avoid;
+}
+
+.download-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 14px;
+}
+
+.download-button:hover {
+    background: #218838;
+}
+
+.scaled-for-print {
+    transform-origin: top left;
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .download-button {
+        display: none !important;
+    }
+
+    .cv-container {
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .cv-container .inner {
+        transform: scale(0.98);
+        transform-origin: top left;
+    }
+
+    .contact-info a {
+        color: #333 !important;
+        text-decoration: none !important;
+    }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Karen Zapata</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <button class="download-button" onclick="exportPDFBackend()">⬇️ Descargar PDF</button>
+
+    <div class="cv-container">
+
+        <!-- ============ Barra lateral ============ -->
+        <aside class="sidebar">
+            <!-- Foto: karen.jpeg (si falta el archivo se muestra el marco vacío) -->
+            <div class="photo-frame">
+                <span class="photo-hint">FOTO<span>Karen Zapata</span></span>
+                <img class="photo" src="karen.jpeg" alt="Foto de Karen Paola Zapata Correa" onerror="this.style.display='none'">
+            </div>
+
+            <div class="sidebar-body">
+                <div class="side-block">
+                    <div class="side-title">Contacto</div>
+                    <ul class="contact-list">
+                        <li><span class="label">Dirección</span><span>Calle 135 # 156 - 54<br>Bogotá D.C.</span></li>
+                        <li><span class="label">Teléfono</span><span>(+57) 314 471 3666</span></li>
+                        <li><span class="label">Correo</span><span><a href="mailto:zapatakaren817@gmail.com">zapatakaren817@gmail.com</a></span></li>
+                        <li><span class="label">Cédula</span><span>1.001.852.762</span></li>
+                        <li><span class="label">Nacimiento</span><span>3 de junio de 1997</span></li>
+                        <li><span class="label">Estado</span><span>Colombiana · Soltera</span></li>
+                    </ul>
+                </div>
+
+                <div class="side-block">
+                    <div class="side-title">Aptitudes</div>
+                    <ul class="side-list">
+                        <li>Producción de panadería: amasado, formado, leudado y horneado</li>
+                        <li>Manejo de maquinaria de producción y panadería</li>
+                        <li>Manipulación, empaque y envasado de alimentos</li>
+                        <li>Control de calidad de producto terminado</li>
+                        <li>Logística: recepción de materias primas y rotación PEPS</li>
+                        <li>Buenas Prácticas de Manufactura (BPM) e higiene</li>
+                        <li>Registro y reporte de datos de producción</li>
+                        <li>Trabajo en equipo, puntualidad y responsabilidad</li>
+                    </ul>
+                </div>
+
+                <div class="side-block">
+                    <div class="side-title">Diplomas y certificaciones</div>
+                    <ul class="side-list">
+                        <li>Diploma de Bachiller Académico</li>
+                        <li>Diplomado Técnico en Comercialización de Alimentos</li>
+                        <li>Certificado de Manipulador de Alimentos</li>
+                        <li>Certificado de Servicio al Cliente</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ============ Columna principal ============ -->
+        <main class="main">
+            <header>
+                <div class="name">Karen Paola<strong>Zapata Correa</strong></div>
+                <div class="headline">Técnico en Comercialización de Alimentos · Auxiliar de Producción y Panadería · Logística</div>
+            </header>
+
+            <section class="section">
+                <div class="section-title">Perfil</div>
+                <div class="profile-text">
+                    Técnico en Comercialización de Alimentos con más de dos años de experiencia en plantas de producción de alimentos y panadería: elaboración, control de calidad y logística. Manejo de maquinaria, amasado y horneado, buenas prácticas de manufactura y rotación de inventario. Persona proactiva, responsable y comprometida, con orientación al cumplimiento de metas, trabajo en equipo, capacidad para trabajar bajo presión y alta vocación de servicio.
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">Formación</div>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <div class="degree">Técnico en Comercialización de Alimentos</div>
+                        <div class="institution">Servicio Nacional de Aprendizaje — SENA, Barranquilla</div>
+                        <div class="edu-duration">04/2023</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="degree">Bachiller Académico</div>
+                        <div class="institution">Institución Educativa Distrital N° 161, Barranquilla</div>
+                        <div class="edu-duration">12/2016</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">Experiencia</div>
+
+                <!-- FECHAS ESTIMADAS: confirmar con Karen el periodo real de Pan D'vita (10 meses) -->
+                <div class="experience-item" data-start="2025-01" data-end="2025-10">
+                    <div class="job-title">Auxiliar de Producción y Logística (Panadería)</div>
+                    <div class="company">PAN D'VITA — Barranquilla, Colombia</div>
+                    <div class="duration"></div>
+                    <div class="experience-details">
+                        <ul>
+                            <li>Elaboración de productos de panadería: pesaje de ingredientes, amasado, formado, leudado y horneado según ficha técnica.</li>
+                            <li>Operación de amasadora, divisora, cámara de fermentación y horno, controlando tiempos y temperaturas de proceso.</li>
+                            <li>Control de calidad del producto terminado (peso, textura, color y punto de horneo) y separación de no conformes.</li>
+                            <li>Logística: recepción de materias primas, rotación de inventario (PEPS) y control de fechas de vencimiento.</li>
+                            <li>Empaque, etiquetado y alistamiento de pedidos para puntos de venta, cumpliendo BPM e higiene del área de trabajo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item" data-start="2023-10" data-end="2024-12">
+                    <div class="job-title">Operaria de Producción de Alimentos</div>
+                    <div class="company">GÓMEZ RUEDA & CIA SAS — Barranquilla, Colombia</div>
+                    <div class="duration"></div>
+                    <div class="experience-details">
+                        <ul>
+                            <li>Preparación, elaboración y envasado de productos, con embalaje, etiquetado y almacenamiento de terminados.</li>
+                            <li>Manejo de maquinaria de planta y verificación del correcto funcionamiento de los procesos automáticos.</li>
+                            <li>Pruebas de calidad en las etapas de la línea de producción, identificando y separando productos no conformes.</li>
+                            <li>Registro de materias primas y datos de producción (cantidades, tiempos y temperatura) y reporte de incidencias.</li>
+                            <li>Limpieza de áreas y maquinaria, cumpliendo normativas de seguridad alimentaria y buenas prácticas de manipulación.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-title">Referencias</div>
+                <div class="references-grid">
+                    <div class="reference-item">
+                        <div class="reference-name">Jaycel Herazo</div>
+                        <div class="reference-details">Mercaderista — (+57) 305 313 7231</div>
+                    </div>
+                    <div class="reference-item">
+                        <div class="reference-name">María Hernández</div>
+                        <div class="reference-details">Auxiliar en Salud — (+57) 300 246 0703</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

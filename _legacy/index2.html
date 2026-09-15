@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Nellis Zapata</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button class="download-button" onclick="exportPDFBackend()">⬇️ Download PDF</button>
+
+    <div class="cv-container">
+        <div class="inner">
+         <div class="header">
+             <div class="thin-line top"></div>
+             <div class="name"><span class="name-initial">N</span><span class="name-rest">ELLIS </span><span class="name-initial">Z</span><span class="name-rest">APATA</span></div>
+             <div class="headline">Bilingual Customer Service Agent | Call Center | Sales & Customer Support</div>
+             <div class="thin-line under-name"></div>
+             <div class="thick-line" style="margin-top: -6mm;"></div>
+             <div class="contact-info">
+                 <span>Barranquilla, Colombia</span>
+                 <span> ♦ </span>
+                <span>(+57) 305 280 8143</span>
+                 <span> ♦ </span>
+                <span><a href="https://www.linkedin.com/in/nellis-zapata-954a182a1" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/nellis-zapata-954a182a1</a></span>
+             </div>
+         </div>
+
+        <div class="section">
+            <div class="section-title" style="margin-top: -5mm;">Education</div>
+            <div class="education-grid">
+                <div class="education-item" data-start="2022-01" data-end="2022-12">
+                    <div class="degree">Technical Diploma in Mass-Market Product Marketing</div>
+                    <div class="institution">SENA</div>
+                    <div class="edu-duration"></div>
+                </div>
+
+                <div class="education-item" data-start="2020-01" data-end="2020-12">
+                    <div class="degree">Technical Diploma in Food Marketing</div>
+                    <div class="institution">SENA</div>
+                    <div class="edu-duration"></div>
+                </div>
+
+                <div class="education-item" data-start="2015-01" data-end="2020-12">
+                    <div class="degree">High School Diploma</div>
+                    <div class="institution">Colegio Cristiano Peniel</div>
+                    <div class="edu-duration"></div>
+                </div>
+
+                <div class="education-item" data-start="2025-01" data-end="current">
+                    <div class="degree">Advanced Conversational English (in progress)</div>
+                    <div class="institution">ULA Language Center</div>
+                    <div class="edu-duration"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="margin-top: -24px;">
+            <div class="section-title">Profile</div>
+            <div class="profile-text">
+                Bilingual sales advisor in training, with over three years of experience in customer service, sales, and in-person advising. B1-level English advancing toward advanced conversational, able to handle service interactions in both English and Spanish. Profile geared toward call center and customer service roles: high tolerance for call volume, script handling, case escalation, KPI compliance, and solution-focused support. Known for assertive communication, empathy, following instructions, teamwork, and a results-oriented attitude.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">SKILLS</div>
+            <div class="skills-grid">
+                <div class="skills-column">
+                    <ul>
+                        <li>Inbound and outbound customer service</li>
+                        <li>Bilingual communication (Native Spanish / English B1)</li>
+                        <li>Handling of scripts and FAQs</li>
+                        <li>Conflict resolution and objection handling</li>
+                        <li>Sales closing and upselling</li>
+                    </ul>
+                </div>
+                <div class="skills-column">
+                    <ul>
+                        <li>KPI compliance (AHT, CSAT, FCR)</li>
+                        <li>Case escalation and follow-up</li>
+                        <li>CRM and digital platform management</li>
+                        <li>Multitasking under pressure and high volume</li>
+                        <li>Assertive, empathetic, and professional communication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Experience</div>
+
+            <div class="experience-item" data-start="2022-06" data-end="2023-06">
+                <div class="job-title">Sales Advisor</div>
+                <div class="company">LTE COL SAS (Barranquilla, Colombia)</div>
+                <div class="duration"></div>
+                <div class="experience-details">
+                    <ul>
+                        <li>Responsible for cell phone financing, cash handling, and operation of financing platforms.</li>
+                        <li>Provided personalized financing solutions for mobile device purchases, tailored to each customer's profile.</li>
+                        <li>Supported customers throughout the entire purchase process, ensuring clarity on terms, deadlines, and obligations.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item" data-start="2022-01" data-end="2022-06">
+                <div class="job-title">Sales Advisor</div>
+                <div class="company">Américas BPS (Barranquilla, Colombia)</div>
+                <div class="duration"></div>
+                <div class="experience-details">
+                    <ul>
+                        <li>Customer service and booking of venues, recreational activities, and town fairs.</li>
+                        <li>Developed strategies to improve the customer experience in recreational services.</li>
+                        <li>Coordinated with internal teams to ensure availability, timing, and service quality.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item" data-start="2021-01" data-end="2022-01">
+                <div class="job-title">Sales Advisor</div>
+                <div class="company">Cobyco SAS (Barranquilla, Colombia)</div>
+                <div class="duration"></div>
+                <div class="experience-details">
+                    <ul>
+                        <li>Product promotion and advising at points of sale, focused on meeting commercial targets.</li>
+                        <li>Visited points of sale, organized planograms, managed stockouts, transfers, and returns.</li>
+                        <li>End-to-end management of the commercial chain and optimization of product display at each location.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="technologies">
+                <ul class="tech-list">
+                    <li>Spanish: Native</li>
+                    <li>English: Intermediate B1 — actively training at ULA Language Center, focused on conversation and customer service</li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- .inner -->
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

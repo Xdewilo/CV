@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "templateId": "classic",
+    "fontId": "source-serif",
+    "profileType": "tech",
+    "accentColor": "#1f2937"
+  },
+  "personal": {
+    "fullName": "Jeremy Posada",
+    "headline": "Software Engineer | Java Spring Boot | Angular | Microservices | Architecture",
+    "city": "Barranquilla",
+    "country": "Colombia",
+    "phone": "(+57) 3043620454",
+    "email": "jeremyposada2003@gmail.com",
+    "links": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/jeremy-posada-56855820b" }
+    ]
+  },
+  "profile": "Software Engineer y estudiante de Ingeniería de Sistemas, en espera de grado, con enfoque en backend, arquitectura de software y desarrollo full-stack. Tengo experiencia construyendo microservicios con Java 21 y Spring Boot, aplicando arquitectura hexagonal, CQRS, DDD y patrones como Mediator para soluciones SaaS multi-tenant. En frontend trabajo con Angular, TypeScript, NGRx y Signals, alineando implementación con mantenibilidad, responsividad y lineamientos de diseño. Me interesa diseñar sistemas claros, escalables y bien estructurados, con foco en estabilidad en producción, criterio técnico y mejora continua.",
+  "skills": [
+    "Arquitectura Hexagonal, DDD, CQRS y Clean Architecture",
+    "Microservicios con Java 21, Spring Boot y Spring Security",
+    "Event-Driven Architecture con Apache Kafka",
+    "JWT, RBAC/permisos granulares y multitenancy",
+    "Resilience4j, WebFlux/WebClient y APIs REST",
+    "Angular, TypeScript, NGRx, RxJS y Signals",
+    "PostgreSQL avanzado, Redis, Flyway y modelado multi-schema",
+    "Docker, Docker Compose, GitHub Actions y observabilidad",
+    "Figma, design systems y UI implementation responsiva",
+    "Integración entre producto, frontend y backend"
+  ],
+  "experience": [
+    {
+      "jobTitle": "Junior Full Stack Developer",
+      "company": "TIC LTDA",
+      "location": "",
+      "start": "2023-03",
+      "end": "2023-09",
+      "bullets": [
+        "Migración de aplicaciones web de PHP a Laravel, mejorando la escalabilidad y organización del código",
+        "Consumo de APIs externas para el manejo y visualización de datos en tiempo real",
+        "Desarrollo de un módulo de generación de códigos de barras y guías de envío para empresas asociadas, como Triple AAA y Efigas"
+      ]
+    },
+    {
+      "jobTitle": "Full Stack Software Engineer (Java/Spring Boot & Angular)",
+      "company": "EIDYKOS S.A.S",
+      "location": "Remote, Barranquilla, Colombia",
+      "start": "2025-03",
+      "end": "current",
+      "bullets": [
+        "Desarrollé microservicios en Java 21 y Spring Boot con arquitectura hexagonal, DDD y CQRS, implementando un patrón Mediator propio para despacho de Commands y Queries.",
+        "Implementé Spring Security con JWT (JJWT), BCrypt y permisos granulares mediante AOP (AspectJ), protegiendo APIs REST en un entorno SaaS multi-tenant.",
+        "Integré Apache Kafka (productor/consumidor, 26+ topics) y Redis (caché de permisos, sesiones distribuidas) para arquitectura event-driven entre microservicios.",
+        "Gestioné PostgreSQL avanzado: multi-schema, JSONB, triggers, índices parciales, Row-Level Security (RLS) y migraciones con Flyway.",
+        "Apliqué Resilience4j (Circuit Breaker, Retry con backoff exponencial) y WebFlux/WebClient para comunicación no-bloqueante entre servicios.",
+        "Diseñé la arquitectura frontend con Angular (Standalone Components), NGRx (Store + Effects + Selectors), Signals, RxJS y PrimeNG, con vertical slicing, lazy loading y lineamientos alineados a design system.",
+        "Instrumenté microservicios con Spring Actuator y Prometheus, trabajando con Grafana, Loki y Jaeger para observabilidad.",
+        "Colaboré en la implementación de interfaces y vistas responsivas en Figma y frontend, conectando criterios de producto, experiencia de usuario y desarrollo.",
+        "Trabajé con Docker Compose (20+ servicios), Apache APISIX (API Gateway), MinIO (S3) y GitHub Actions (CI/CD)."
+      ]
+    }
+  ],
+  "education": [
+    { "degree": "Ingeniería de Sistemas", "institution": "INSTITUCIÓN UNIVERSITARIA AMERICANA", "details": "En espera de grado", "start": "2021-06", "end": "2026-06" },
+    { "degree": "Diplomado en C# .NET", "institution": "INSTITUCIÓN UNIVERSITARIA AMERICANA", "details": "", "start": "2025-01", "end": "2025-02" }
+  ],
+  "technologies": [
+    { "category": "Backend", "items": ["Java", "Spring Boot"] },
+    { "category": "Frontend", "items": ["Angular", "TypeScript"] },
+    { "category": "Data", "items": ["PostgreSQL", "Redis", "MySQL"] },
+    { "category": "Messaging", "items": ["Apache Kafka"] },
+    { "category": "Infra", "items": ["Docker", "Docker Compose", "GitHub Actions"] },
+    { "category": "API & Docs", "items": ["REST APIs", "Swagger/OpenAPI"] },
+    { "category": "Product/UI", "items": ["Figma", "Design Systems"] }
+  ],
+  "languages": [],
+  "abilities": [],
+  "references": [
+    { "name": "Waldir Bonilla", "role": "Director de proyectos de TIC LTDA", "contact": "+57 3014177306 · TIC LTDA" }
+  ]
+}

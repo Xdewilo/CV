@@ -1,0 +1,29 @@
+{
+  "name": "ats-cv-builder",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open-source ATS-friendly resume builder. Fill a form, pick a template and font, download PDF.",
+  "license": "MIT",
+  "workspaces": [
+    "apps/web",
+    "apps/server",
+    "packages/*"
+  ],
+  "scripts": {
+    "build:packages": "npm run build -w packages/cv-schema && npm run build -w packages/templates",
+    "dev:packages": "concurrently -k -n schema,templates \"npm run dev -w packages/cv-schema\" \"npm run dev -w packages/templates\"",
+    "dev": "npm run build:packages && concurrently -k -n schema,templates,web,server -c gray,gray,blue,magenta \"npm run dev -w packages/cv-schema\" \"npm run dev -w packages/templates\" \"npm run dev -w apps/web\" \"npm run dev -w apps/server\"",
+    "build": "npm run build:packages && npm run build -w apps/web && npm run build -w apps/server",
+    "start": "node apps/server/dist/index.js",
+    "lint": "npm run lint -ws --if-present",
+    "format": "prettier --write \"**/*.{ts,html,css,md,json}\" --ignore-path .gitignore"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "prettier": "^3.3.3",
+    "typescript": "~5.5.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body { height: 100%; }
+  body {
+    @apply bg-ink-100 text-ink-900 font-ui antialiased;
+  }
+  input, textarea, select {
+    @apply text-sm;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition;
+  }
+  .btn-primary { @apply btn bg-accent-600 text-white hover:bg-accent-500; }
+  .btn-ghost { @apply btn bg-white text-ink-700 border border-ink-300 hover:bg-ink-100; }
+  .btn-danger { @apply btn bg-red-600 text-white hover:bg-red-500; }
+  .field {
+    @apply flex flex-col gap-1;
+  }
+  .field > label {
+    @apply text-xs font-semibold uppercase tracking-wide text-ink-500;
+  }
+  .field > input, .field > textarea, .field > select {
+    @apply rounded-md border border-ink-300 bg-white px-3 py-2 outline-none focus:border-accent-500 focus:ring-1 focus:ring-accent-500;
+  }
+  .card {
+    @apply rounded-lg bg-white shadow-sm border border-ink-300/50 p-4;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full bg-ink-100 border border-ink-300 px-2.5 py-1 text-xs;
+  }
+  .tab {
+    @apply px-3 py-1.5 rounded-md text-sm font-medium text-ink-700 hover:bg-ink-100 cursor-pointer;
+  }
+  .tab.active {
+    @apply bg-accent-600 text-white hover:bg-accent-600;
+  }
+}
+
+/* Preview frame */
+.preview-frame {
+  @apply mx-auto bg-white shadow-lg;
+  width: 210mm;
+  min-height: 297mm;
+  transform-origin: top center;
+}

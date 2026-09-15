@@ -1,29 +1,19 @@
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Editors & IDEs
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-
-# Logs & Temporary files
+node_modules/
+dist/
+build/
+.angular/
+.cache/
+.env
+.env.local
 *.log
-tmp/
-scratch/
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+coverage/
+_legacy/node_modules_old/
+
+# Generated artifacts
+*.pdf
+*.stackdump
